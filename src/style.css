@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities; 
+
+.grid-temp-areas{
+    grid-template-areas: 
+    "side main"
+    "player player";
+}
+
+.dashboard{
+    grid-area: main;
+}
+
+.side{
+    grid-area: side;
+}
+
+.player{
+    grid-area: player;
+}
+
+
