@@ -1,15 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.css" />
+    <script type="module" src="dashboard.js"></script>
     <title>Dashboard</title>
-</head>
+  </head>
 
-<body>
-    <h1>Welcome to Dashboard</h1>
-</body>
-
+  <body class="h-screen">
+    <main
+      class="grid-temp-areas grid h-full grid-cols-[250px_1fr] grid-rows-[1fr_100px] bg-dark text-white"
+    >
+      <aside class="side border-2">i am side bar</aside>
+      <section class="dashboard flex flex-col border-2 px-7">
+        <header class="flex h-16 items-center justify-end border-2">
+          <nav>
+            <button
+              id="user-profile-btn"
+              title="username"
+              class="flex items-center justify-center gap-1 rounded-2xl bg-black py-0.5 px-2 hover:bg-gray-700"
+            >
+              <section id="user-image">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="h-8 w-8 rounded-full bg-gray-600"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </section>
+              <section id="user-name" class="flex gap-2">
+                <h3 class="font-bold"></h3>
+                <i>&#x25bc;</i>
+              </section>
+            </button>
+          </nav>
+        </header>
+        <section class="h-full border-2">content</section>
+      </section>
+      <footer class="player border-2">i am player the footer</footer>
+    </main>
+  </body>
 </html>
