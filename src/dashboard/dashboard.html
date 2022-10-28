@@ -16,20 +16,21 @@
       <aside class="side border-2">i am side bar</aside>
       <section class="dashboard flex flex-col border-2 px-7">
         <header class="flex h-16 items-center justify-end border-2">
-          <nav>
+          <nav class="relative">
             <button
               id="user-profile-btn"
               title="username"
               class="flex items-center justify-center gap-1 rounded-2xl bg-black py-0.5 px-2 hover:bg-gray-700"
             >
-              <section id="user-image">
+              <section id="user-image" class="h-8 w-8 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
                   stroke="currentColor"
-                  class="h-8 w-8 rounded-full bg-gray-600"
+                  class="bg-gray-600"
+                  id="default-image"
                 >
                   <path
                     stroke-linecap="round"
@@ -38,11 +39,22 @@
                   />
                 </svg>
               </section>
-              <section id="user-name" class="flex gap-2">
-                <h3 class="font-bold"></h3>
+              <section class="flex gap-2">
+                <h3 id="user-name" class="font-bold"></h3>
                 <i>&#x25bc;</i>
               </section>
             </button>
+            <ul
+              id="user-profile-menu"
+              class="absolute top-10 hidden w-full rounded-md bg-gray-700 p-1"
+            >
+              <li
+                id="logout"
+                class="w-full cursor-pointer rounded-sm py-1 px-2 hover:bg-gray-500"
+              >
+                Log Out
+              </li>
+            </ul>
           </nav>
         </header>
         <section class="h-full border-2">content</section>

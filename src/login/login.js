@@ -1,4 +1,4 @@
-import { ACCESS_TOKEN,TOKEN_TYPE,EXPIRES_IN } from "../comman.js";
+import { ACCESS_TOKEN, TOKEN_TYPE, EXPIRES_IN } from "../comman.js";
 
 const clientId = import.meta.env.VITE_CLIENT_ID;
 const scopes =
@@ -37,7 +37,8 @@ document.addEventListener("DOMContentLoaded", () => {
 window.setItemsInLocalStorage = (accessToken, tokenType, expiresIn) => {
   localStorage.setItem(ACCESS_TOKEN, accessToken);
   localStorage.setItem(TOKEN_TYPE, tokenType);
-  localStorage.setItem(EXPIRES_IN, expiresIn);
+  localStorage.setItem(EXPIRES_IN, Date.now() + expiresIn * 1000);
+
   window.location.reload();
 };
 
