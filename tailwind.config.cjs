@@ -8,7 +8,10 @@ module.exports = {
         darkgreen: "#044f00",
         dark: "#121212",
       },
+      gridTemplateColumns: {
+        "auto-fill-cards": "repeat(auto-fill,minmax(200px,1fr))",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/line-clamp"),],
 };
