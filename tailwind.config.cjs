@@ -9,9 +9,9 @@ module.exports = {
         dark: "#121212",
       },
       gridTemplateColumns: {
-        "auto-fill-cards": "repeat(auto-fill,minmax(200px,1fr))",
+        "auto-fill-cards": "repeat(auto-fill,minmax(170px,1fr))",
       },
     },
   },
-  plugins: [require("@tailwindcss/line-clamp"),],
+  plugins: [require("@tailwindcss/line-clamp")],
 };

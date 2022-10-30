@@ -14,8 +14,20 @@
       class="grid-temp-areas grid h-full grid-cols-[250px_1fr] grid-rows-[1fr_100px] bg-dark text-white"
     >
       <aside class="side border-2">i am side bar</aside>
-      <section class="dashboard flex flex-col overflow-y-auto border-2 px-7">
-        <header class="flex h-16 items-center justify-end border-2 py-4">
+
+      <section
+        id="dashboard"
+        class="dashboard relative flex flex-col overflow-y-auto border-2"
+      >
+        <section
+          class="absolute flex h-64 w-full items-center bg-gradient-to-b from-gray-600 px-7"
+        >
+          <h1 class="text-5xl">Hello Shubham</h1>
+        </section>
+        <header
+          id="navbar"
+          class="sticky top-0 flex h-16 items-center justify-end py-4 px-7"
+        >
           <nav class="relative">
             <button
               id="user-profile-btn"
@@ -39,9 +51,14 @@
                   />
                 </svg>
               </section>
-              <section class="flex gap-2">
+              <section class="flex items-center gap-2">
                 <h3 id="user-name" class="font-bold"></h3>
-                <i id="user-profile-btn-toggle-icon ">&#x25bc;</i>
+                <img
+                  src="arrow-point-to-down.png"
+                  alt="arrow"
+                  id="user-profile-btn-toggle-icon"
+                  class="h-3 w-3"
+                />
               </section>
             </button>
             <ul
@@ -58,7 +75,8 @@
           </nav>
         </header>
 
-        <article id="content"></article>
+        <article id="content" class="mt-40"></article>
+        <article id="playlist"></article>
       </section>
       <footer class="player border-2">i am player the footer</footer>
     </main>
