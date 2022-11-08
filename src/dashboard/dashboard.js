@@ -2,6 +2,12 @@ import { fetchRequest } from "../api";
 import { ENDPOINT, LOGOUT, SECTIONS } from "../comman";
 
 let trackList = [];
+const home = document.getElementById("home");
+home.setAttribute(
+  "href",
+  `${import.meta.env.VITE_APP_URL}dashboard/dashboard.html`
+);
+
 const audio = new Audio();
 const previous = document.getElementById("prev");
 const next = document.getElementById("next");
